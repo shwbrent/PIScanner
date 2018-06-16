@@ -1,4 +1,4 @@
-PIScanner(Personal Information Scanner)<br>
+PIScanner(Personal Information Scanner)個人資料掃描器<br>
 是用來掃描電腦中檔案的個人資訊，再將之匯出成csv檔案以供監視
 ===
 個人資訊:<br>
