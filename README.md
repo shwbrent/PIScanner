@@ -1,10 +1,10 @@
 PIScanner(Personal Information Scanner)­Ó¤H¸ê®Æ±½´y¾¹<br>
 ****
 
-|Author|Ä¬ªlÞ³¡B¦ó©Ó¿A|
-|Co-author|§d¬f½å¡B½²©¾ÀM|
-|---|---
-|Email|shwbrent@gmail.com
+| Author	| Ä¬ªlÞ³,¦ó©Ó¿A		|
+| Co-author	| §d¬f½å,½²©¾ÀM		|
+| --------- | -------------		|
+| Email		| shwbrent@gmail.com|
 
 ****
 
