@@ -14,8 +14,10 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 public class PIScanner2 implements ActionListener, PropertyChangeListener{
+	
 	BackgroundCalculator AnalyTask = new BackgroundCalculator();//concurrency
     File[] selectedFiles;
+    boolean checkBoxNotNull;//判斷checkbox內容不為空
     File dir;
     JPanel pan = new JPanel();
     private JProgressBar progressBar = new JProgressBar(0,100);
@@ -278,11 +280,17 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
      * */
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
+		
 		// TODO Auto-generated method stub
 		if("progress" == evt.getPropertyName()) {
+			
             int progress = (int) evt.getNewValue();
             progressBar.setValue(progress);
 		}
+	}
+	
+	private void setCheckboxNotNull() {
+		checkBoxNotNull = (jcb1.isSelected() || jcb2.isSelected() || jcb3.isSelected() || jcb4.isSelected()) ? true:false;
 	}
 
     public void actionPerformed(ActionEvent e) {
@@ -322,18 +330,25 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
          * Start to Scanning Button 
          * */
         if (e.getSource() == b1) {
+        	setCheckboxNotNull();
         	if(selectedFiles != null) {
-                PDS.setIfIdentity(jcb1.isSelected());
-                PDS.setIfCellPhone(jcb2.isSelected());
-                PDS.setIfCashCard(jcb3.isSelected());
-                PDS.setIfEmail(jcb4.isSelected());
-                
-                AnalyTask = new BackgroundCalculator();
-            	AnalyTask.addPropertyChangeListener(this);
-                AnalyTask.execute();
-                
-                b1.setVisible(false);
-                b2.setVisible(true);
+        		if(checkBoxNotNull) {
+        			
+	                PDS.setIfIdentity(jcb1.isSelected());
+	                PDS.setIfCellPhone(jcb2.isSelected());
+	                PDS.setIfCashCard(jcb3.isSelected());
+	                PDS.setIfEmail(jcb4.isSelected());
+	                AnalyTask = new BackgroundCalculator();
+	            	AnalyTask.addPropertyChangeListener(this);
+	                AnalyTask.execute();
+	                
+	                b1.setVisible(false);
+	                b2.setVisible(true);
+        		}else {
+        			t1.setText("請選取個資種類!!\n");
+        		}
+        	}else {
+        		t1.setText("請開啟要掃描的檔案!!\n");
         	}
         }	
    
