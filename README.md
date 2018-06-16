@@ -1,10 +1,9 @@
-#PIScanner(Personal Information Scanner)個人資料掃描器<br>
+# PIScanner(Personal Information Scanner)個人資料掃描器<br>
 ****
 
-| Author	| 蘇泓瑋、何承澤|
-| Co-author | 吳柏賢、蔡忠霖|
-| --------- | -------------	|
-| Email		| shwbrent@gmail.com|
+| Author	| 蘇泓瑋、何承澤、吳柏賢、蔡忠霖|
+| --------- | :-------------:	|
+| Email		| shwbrent@gmail.com |
 
 ****
 
