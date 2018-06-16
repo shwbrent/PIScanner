@@ -9,3 +9,4 @@ PIScanner(Personal Information Scanner)個人資料掃描器<br>
 
 ---
 ![PIScanner](https://github.com/shwbrent/PIScanner/blob/master/Readme_IMG/PIS_UI.GIF "UI")
+![About](https://github.com/shwbrent/PIScanner/blob/master/Readme_IMG/about.GIF "about")
