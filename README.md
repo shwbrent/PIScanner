@@ -1,14 +1,12 @@
 # PIScanner(Personal Information Scanner)個人資料掃描器<br>
 
-****
-
 | Author	| 蘇泓瑋、何承澤、吳柏賢、蔡忠霖|
 | --------- | :-------------:	|
 | Email		| shwbrent@gmail.com |
 
 ****
 
-個人資訊:<br>
+## 個人資訊種類
 * 身份證字號(Identification)<br>
 * 台灣手機號碼(Taiwan mobile phone number)<br>
 * 信用卡(Cash Card)<br>
@@ -16,7 +14,7 @@
 
 ---
 
-使用方式:
+## 使用方式(Usage)
 1. 開啟要掃描的資料夾或檔案
 2. 選取要掃描的個資種類
 3. 點擊開始掃描
