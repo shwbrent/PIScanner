@@ -1,4 +1,5 @@
 # PIScanner(Personal Information Scanner)個人資料掃描器<br>
+
 ****
 
 | Author	| 蘇泓瑋、何承澤、吳柏賢、蔡忠霖|
@@ -7,7 +8,6 @@
 
 ****
 
-===
 個人資訊:<br>
 * 身份證字號(Identification)<br>
 * 台灣手機號碼(Taiwan mobile phone number)<br>
