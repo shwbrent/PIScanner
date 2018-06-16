@@ -1,28 +1,28 @@
-PIScanner(Personal Information Scanner)­Ó¤H¸ê®Æ±½´y¾¹<br>
+#PIScanner(Personal Information Scanner)å€‹äººè³‡æ–™æƒæå™¨<br>
 ****
 
-| Author	| Ä¬ªlŞ³,¦ó©Ó¿A		|
-| Co-author	| §d¬f½å,½²©¾ÀM		|
-| --------- | -------------		|
+| Author	| è˜‡æ³“ç‘‹ã€ä½•æ‰¿æ¾¤|
+| Co-author | å³æŸè³¢ã€è”¡å¿ éœ–|
+| --------- | -------------	|
 | Email		| shwbrent@gmail.com|
 
 ****
 
 ===
-­Ó¤H¸ê°T:<br>
-* ¨­¥÷ÃÒ¦r¸¹(Identification)<br>
-* ¥xÆW¤â¾÷¸¹½X(Taiwan mobile phone number)<br>
-* «H¥Î¥d(Cash Card)<br>
-* ¹q¤l¶l¥ó<br>
+å€‹äººè³‡è¨Š:<br>
+* èº«ä»½è­‰å­—è™Ÿ(Identification)<br>
+* å°ç£æ‰‹æ©Ÿè™Ÿç¢¼(Taiwan mobile phone number)<br>
+* ä¿¡ç”¨å¡(Cash Card)<br>
+* é›»å­éƒµä»¶<br>
 
 ---
 
-¨Ï¥Î¤è¦¡:
-1. ¶}±Ò­n±½´yªº¸ê®Æ§¨©ÎÀÉ®×
-2. ¿ï¨ú­n±½´yªº­Ó¸êºØÃş
-3. ÂIÀ»¶}©l±½´y
-4. ±½´y§¹²¦«á¡AÀx¦sÀÉ®×(·|¶×¥XcsvÀÉ®×)
-5. ¶}±ÒcsvÀÉ®×ÀËµø§t¦³­Ó¸êºÃ¼{ªºÀÉ®×
+ä½¿ç”¨æ–¹å¼:
+1. é–‹å•Ÿè¦æƒæçš„è³‡æ–™å¤¾æˆ–æª”æ¡ˆ
+2. é¸å–è¦æƒæçš„å€‹è³‡ç¨®é¡
+3. é»æ“Šé–‹å§‹æƒæ
+4. æƒæå®Œç•¢å¾Œï¼Œå„²å­˜æª”æ¡ˆ(æœƒåŒ¯å‡ºcsvæª”æ¡ˆ)
+5. é–‹å•Ÿcsvæª”æ¡ˆæª¢è¦–å«æœ‰å€‹è³‡ç–‘æ…®çš„æª”æ¡ˆ
 
 ---
 ![PIScanner](https://github.com/shwbrent/PIScanner/blob/master/Readme_IMG/PIS_UI.GIF "UI")
