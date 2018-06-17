@@ -20,7 +20,7 @@ public class PersonDataScan {
 	
     private boolean ifEmail;
     
-    private boolean ifCashCard;
+    private boolean ifCreditCard;
     
     private boolean ifCellPhone;
     
@@ -36,7 +36,7 @@ public class PersonDataScan {
     /**
      * 信用卡數量
      */
-    private int CashCardCount;
+    private int CreditCardCount;
     /**
      * 身份證數量 
      */
@@ -52,7 +52,7 @@ public class PersonDataScan {
     /**
      * 信用卡容器的大小
      */
-    private int CashCard_resultCount;
+    private int CreditCard_resultCount;
     /**
      * 身份證容器的大小
      */
@@ -80,7 +80,7 @@ public class PersonDataScan {
     /**
      * 信用卡的容器
      */
-    private final ArrayList<String> CashCard_result = new ArrayList<>();
+    private final ArrayList<String> CreditCard_result = new ArrayList<>();
     /**
      * 身份證的容器
      */
@@ -93,7 +93,7 @@ public class PersonDataScan {
     protected void PersonDataClear(){
         this.Email_result.clear();
         this.Identity_result.clear();
-        this.CashCard_result.clear();
+        this.CreditCard_result.clear();
         this.Cellphone_result.clear();
     }
     
@@ -101,8 +101,8 @@ public class PersonDataScan {
         this.ifEmail = ifEmail;
     }
     
-    protected void setIfCashCard(boolean ifCashCard){
-        this.ifCashCard = ifCashCard;
+    protected void setIfCreditCard(boolean ifCreditCard){
+        this.ifCreditCard = ifCreditCard;
     }
 
     protected void setIfIdentity(boolean ifIdentity){
@@ -117,7 +117,7 @@ public class PersonDataScan {
         this.m = Pattern.compile("\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z]+").matcher(this.data);
     }
     
-    private void setMCashCard(){
+    private void setMCreditCard(){
         this.m = Pattern.compile("((\\d{4}-){3}\\d{3,4})|\\d{14,16}").matcher(this.data);
     }
     
@@ -134,9 +134,9 @@ public class PersonDataScan {
         this.Email_resultCount = Email_result.size();
     }
     
-    private void setCashCardCount(){
-        this.CashCardCount = CashCard_result.size()/4;
-        this.CashCard_resultCount = CashCard_result.size();
+    private void setCreditCardCount(){
+        this.CreditCardCount = CreditCard_result.size()/4;
+        this.CreditCard_resultCount = CreditCard_result.size();
     }
     
     private void setIdentityCount(){
@@ -166,8 +166,8 @@ public class PersonDataScan {
         return this.EmailCount;
     }
  
-    public int getCashCardCount(){
-        return this.CashCardCount;
+    public int getCreditCardCount(){
+        return this.CreditCardCount;
     }
     
     public int getIdentityCount(){
@@ -182,8 +182,8 @@ public class PersonDataScan {
         return this.Email_result;
     }
    
-    public ArrayList<String> getCashCardData(){
-        return this.CashCard_result;
+    public ArrayList<String> getCreditCardData(){
+        return this.CreditCard_result;
     }
    
     public ArrayList<String> getIdentityData(){
@@ -273,11 +273,11 @@ public class PersonDataScan {
         return result;
     }
    
-    public String CashCardType(String str){
+    public String CreditCardType(String str){
         String result="";
         String test = str;
         
-        if(CashCard(str)){
+        if(CreditCard(str)){
             test = test.substring(0, 4);
             int num = Integer.parseInt(test);
 
@@ -313,7 +313,7 @@ public class PersonDataScan {
         return result;
     }
    
-    public static boolean CashCard(String str){
+    public static boolean CreditCard(String str){
         String test = CashTestToString(str);
         int []num = new int[test.length()];
         int temp=0;
@@ -352,8 +352,8 @@ public class PersonDataScan {
                 wr.write(Identity_result.get(i));
                 wr.newLine();
             }
-            for(int i=0; i<CashCard_resultCount; i++){
-                wr.write(CashCard_result.get(i));
+            for(int i=0; i<CreditCard_resultCount; i++){
+                wr.write(CreditCard_result.get(i));
                 wr.newLine();
             }
             for(int i=0; i<Cellphone_resultCount; i++){
@@ -395,14 +395,14 @@ public class PersonDataScan {
                 if((i+1)%4==0)wr.newLine();
             }
             wr.newLine();
-            if(CashCard_resultCount!=0)wr.write("信用卡\n");
-            for(int i=0; i<CashCard_resultCount; i++){
+            if(CreditCard_resultCount!=0)wr.write("信用卡\n");
+            for(int i=0; i<CreditCard_resultCount; i++){
                 Separated = (i+5)%5==0||(i+4)%5==0 ? ",,,,":",";
-                if(CashCard(CashCard_result.get(i))){
-                    wr.write("=\""+CashCard_result.get(i)+"\""+Separated);
+                if(CreditCard(CreditCard_result.get(i))){
+                    wr.write("=\""+CreditCard_result.get(i)+"\""+Separated);
                 }
                 else{
-                    wr.write("\""+CashCard_result.get(i)+"\""+Separated);
+                    wr.write("\""+CreditCard_result.get(i)+"\""+Separated);
                 }
                 if((i+1)%5==0)wr.newLine();
             }
@@ -418,12 +418,12 @@ public class PersonDataScan {
                 }
                 if((i+1)%5==0)wr.newLine();
             }
-            Separated = Integer.toString(EmailCount+IdentityCount+CashCardCount+CellphoneCount);
+            Separated = Integer.toString(EmailCount+IdentityCount+CreditCardCount+CellphoneCount);
             wr.newLine();
             wr.write("個人資訊總數:,,"+Separated+"個\n\n"
             +"電子郵件:,,"+EmailCount+"個\n"
             +"身份證:,,"+IdentityCount+"個\n"
-            +"信用卡:,,"+CashCardCount+"個\n"
+            +"信用卡:,,"+CreditCardCount+"個\n"
             +"手機號碼:,,"+CellphoneCount+"個\n");
             wr.flush();
             wr.close();
@@ -490,14 +490,14 @@ public class PersonDataScan {
     }
     
     
-    public void MatchCashCardData(String dir, int pageNum, int line){
-        this.setMCashCard();
-        while(this.m.find() && CashCard(this.m.group())){
-            CashCard_result.add(dir);
-            CashCard_result.add(this.m.group());
-            CashCard_result.add(Integer.toString(pageNum));
-            CashCard_result.add(Integer.toString(line));
-            CashCard_result.add(CashCardType(this.m.group()));
+    public void MatchCreditCardData(String dir, int pageNum, int line){
+        this.setMCreditCard();
+        while(this.m.find() && CreditCard(this.m.group())){
+            CreditCard_result.add(dir);
+            CreditCard_result.add(this.m.group());
+            CreditCard_result.add(Integer.toString(pageNum));
+            CreditCard_result.add(Integer.toString(line));
+            CreditCard_result.add(CreditCardType(this.m.group()));
         }
     }
     
@@ -532,8 +532,8 @@ public class PersonDataScan {
 	                        if(this.ifIdentity){
 	                            MatchIdentityData(BufferedFolder.get(index),pageNum,count);
 	                        }
-	                        if(this.ifCashCard){
-	                            MatchCashCardData(BufferedFolder.get(index),pageNum,count);
+	                        if(this.ifCreditCard){
+	                            MatchCreditCardData(BufferedFolder.get(index),pageNum,count);
 	                        }
 	                    }while(true);
 	                    br.close();
@@ -550,7 +550,7 @@ public class PersonDataScan {
 	    };
 	        
 	    setEmailCount();
-	    setCashCardCount();
+	    setCreditCardCount();
 	    setIdentityCount();
 	    setCellphoneCount();
     }

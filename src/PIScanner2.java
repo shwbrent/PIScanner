@@ -336,7 +336,7 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
         			
 	                PDS.setIfIdentity(jcb1.isSelected());
 	                PDS.setIfCellPhone(jcb2.isSelected());
-	                PDS.setIfCashCard(jcb3.isSelected());
+	                PDS.setIfCreditCard(jcb3.isSelected());
 	                PDS.setIfEmail(jcb4.isSelected());
 	                AnalyTask = new BackgroundCalculator();
 	            	AnalyTask.addPropertyChangeListener(this);
