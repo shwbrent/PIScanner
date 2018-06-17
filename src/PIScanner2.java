@@ -288,7 +288,9 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
             progressBar.setValue(progress);
 		}
 	}
-	
+	/*
+	 * 檢查checkbox是否都沒有勾選，TRUE代表至少有一個被勾選
+	 * */
 	private void setCheckboxNotNull() {
 		checkBoxNotNull = (jcb1.isSelected() || jcb2.isSelected() || jcb3.isSelected() || jcb4.isSelected()) ? true:false;
 	}

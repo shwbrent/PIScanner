@@ -113,8 +113,14 @@ public class PersonDataScan {
         this.ifCellPhone = ifCellPhone;
     }
 
+    /*
+     * 電子郵件格式:
+     * w(函數字)1個以上後面可接-後w，或.後w，或不接，然後接上@
+     * @後面可接一個以上w，(然後接.或-，然後接一個以上w)括弧可接或不接
+     * 一個.，後面接一個以上大小寫英文字母
+     * */
     private void setMEmail(){
-        this.m = Pattern.compile("\\w+((-\\w+)|(\\.\\w+))*\\@[A-Za-z0-9]+((\\.|-)[A-Za-z0-9]+)*\\.[A-Za-z]+").matcher(this.data);
+        this.m = Pattern.compile("\\w+((-\\w+)|(\\.\\w+))*\\@\\w+((\\.|-)\\w+)*\\.[A-Za-z]+").matcher(this.data);
     }
     
     private void setMCreditCard(){
@@ -255,7 +261,10 @@ public class PersonDataScan {
         return result;
     }
  
-    public static String CashTestToString(String str){
+    /*
+     * (\\d-)有三組，後面接3到4個數字(15~16個數字)
+     * */
+    public static String CreditTestToString(String str){
         String result;
         if(str.matches("^(\\d{4}-){3}\\d{3,4}$")){
             StringBuilder sb = new StringBuilder(str);
@@ -314,7 +323,7 @@ public class PersonDataScan {
     }
    
     public static boolean CreditCard(String str){
-        String test = CashTestToString(str);
+        String test = CreditTestToString(str);
         int []num = new int[test.length()];
         int temp=0;
         boolean result ;
