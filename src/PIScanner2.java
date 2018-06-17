@@ -58,13 +58,10 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
    
     
     public PIScanner2() {
-    	
-    	//progressBar.setValue(0);
     	progressBar.setBounds(400, 10, 350, 25);
     	progressBar.setStringPainted(true);
     	cp.add(progressBar);
     	cp.add(pan);
-
     	pan.setBounds(25,45, 200, 300);
         pan.setBackground(Color.getHSBColor((float) 0.333333333334,(float) 0.13 ,(float) 1.00));
         pan.setBorder(BorderFactory.createLineBorder(Color.red, 1));
@@ -72,8 +69,6 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
         Border line_a = BorderFactory.createBevelBorder(BevelBorder.LOWERED);
         TitledBorder fi = BorderFactory.createTitledBorder(line_a, "選取個資種類", TitledBorder.CENTER, TitledBorder.CENTER, f8, Color.BLUE);
         pan.setBorder(fi);
-
-        //pan.setLayout(new );
         pan.add(jcb1);
         pan.add(jcb2);
         pan.add(jcb3);
@@ -119,9 +114,7 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
         jcb2.setOpaque(false);
         jcb3.setOpaque(false);
         jcb4.setOpaque(false);
-        //jl2.setOpaque(false);
         jl1.setFont(f3);
-        //jl2.setFont(f8);
         jl3.setFont(f4);
         jl4.setFont(f8);
         b1.setFont(f4);
@@ -136,7 +129,6 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
         jcb2.addActionListener(this);
         jcb3.addActionListener(this);
         jcb4.addActionListener(this);
-        //jl2.setBounds(25,35,200,50);
         jl3.setBounds(40,490,500,30);
         jl4.setBounds(250,10,150,30);
         b1.setBounds(70,380,110,60);
@@ -147,13 +139,7 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
         jcb2.setBounds(30,100,180,50);
         jcb3.setBounds(30,160,180,50);
         jcb4.setBounds(30,220,180,50);
-       //jl2.setBackground(Color.yellow);
-        /*jcb1.setForeground(Color.BLUE);
-        jcb2.setForeground(Color.BLUE);
-        jcb3.setForeground(Color.BLUE);
-        jcb4.setForeground(Color.BLUE);*/
         jl1.setForeground(Color.BLUE);
-        //jl2.setForeground(Color.BLUE);
         jl3.setForeground(Color.BLUE);
         jl4.setForeground(Color.BLUE);
 
@@ -165,7 +151,6 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
         cp.add(b1);
         cp.add(b2);
 
-        //JDialog.setDefaultLookAndFeelDecorated(true);
         fr1.setVisible(true); 
         b2.setVisible(false);
     }
@@ -183,11 +168,8 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
     	private long totalFiles;
 
     	/*
-    	private void setFilesDist() {
-    		this.progressDist = PDS.getProgressBarDist();
-    	}
-    	*/
-    	
+    	 * 設置每個檔案佔進度條的百分比
+    	 * */
     	private void setFilesDist(long totalFiles) {
     		this.progressDist = PDS.getProgressBarDist(totalFiles);
     	}
@@ -282,12 +264,12 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
 	public void propertyChange(PropertyChangeEvent evt) {
 		
 		// TODO Auto-generated method stub
-		if("progress" == evt.getPropertyName()) {
-			
+		if("progress" == evt.getPropertyName()) {	
             int progress = (int) evt.getNewValue();
             progressBar.setValue(progress);
 		}
 	}
+	
 	/*
 	 * 檢查checkbox是否都沒有勾選，TRUE代表至少有一個被勾選
 	 * */
