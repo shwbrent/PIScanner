@@ -7,7 +7,7 @@
 ****
 
 ## 個人資訊種類(Personal Information Category)
-* 身份證字號(Identification)<br>
+* 身份證字號(Taiwan Identification)<br>
 * 台灣手機號碼(Taiwan mobile phone number)<br>
 * 信用卡(Credit Card)<br>
 * 電子郵件(Email)<br>
