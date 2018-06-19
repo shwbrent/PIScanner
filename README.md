@@ -1,10 +1,6 @@
 # 個人資料掃描器PIScanner(Personal Information Scanner)<br>
 ![PIScanner](https://github.com/shwbrent/PIScanner/blob/master/Readme_IMG/UI.PNG "UI")<br>
 
-| Author	| 蘇泓瑋、何承澤、吳柏賢、蔡忠霖|
-| --------- | :-------------:	|
-| Email		| shwbrent@gmail.com |
-
 ****
 
 ## 個人資訊種類(Personal Information Category)
@@ -27,3 +23,6 @@
 ![PIScanner](https://github.com/shwbrent/PIScanner/blob/master/Readme_IMG/Result.png "UI")<br>
 
 ---
+| Author	| 蘇泓瑋、何承澤、吳柏賢、蔡忠霖|
+| --------- | :-------------:	|
+| Email		| shwbrent@gmail.com |
