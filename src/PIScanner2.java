@@ -189,7 +189,6 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
     	@Override
     	protected Void doInBackground() throws Exception {
     		// TODO Auto-generated method stub
-    		//int progressLength = selectedFiles.length;
     		InitTotalFiles();
     		progressBar.setMaximum(100);
     		progressBar.setMinimum(0);
@@ -204,8 +203,6 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
                 setProgress(0);
                 float progress = 0;
                 for(File fs : selectedFiles){
-                	
-                	
                 	t1.append(fs.getAbsolutePath()+"\n");
                 	PDS.setFiles(fs.getAbsolutePath());
                 	setFilesCount();
@@ -239,21 +236,21 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
             }      
     		return null;
     	}
-    	
+    	/*
+    	 * doInBackground執行完後會執行此處
+    	 * 
+    	 * */
     	protected void done() {
     		try{
     			t1.append( isCancelled() ? CalculatorCancel: CalculatorDone );
     			b2.setVisible(false);
     			b1.setVisible(true);
+    			finalize();
     		}catch(Exception e) {
-    			
+    			e.printStackTrace();
+    		}catch(Throwable e) {
+    			e.printStackTrace();
     		}
-    		try {
-				this.finalize();
-			} catch (Throwable e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
     	}
     }
 
