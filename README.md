@@ -49,9 +49,10 @@
         return files;
     }
 ```
-2. 在介面(UI)中，巢狀類別**繼承(extends)SwingWorker<T,V>覆寫doInBackground、done**來實現子執行緒掃描
+2. 在介面(UI)中，巢狀類別**繼承(extends)SwingWorker<T,V>覆寫doInBackground、done實現子執行緒掃描**
 ```java
-	class BackgroundCalculator extends SwingWorker<Void, Void>{
+
+	private class BackgroundCalculator extends SwingWorker<Void, Void>{
 		
 		/*此處省略*/
 		......
@@ -68,21 +69,21 @@
 					/*此處進度條和資料解析片段省略...*/
                     ......
 					
-                    	/*
-                    	 * 在dpInBackgrepound.cancel 發生後
-                    	 * Thread如果還在sleep，會造成thread sleep interruption
-                    	 * 因此在thread.sleep 要多加一個try-catch 捕捉例外
-                    	 * 否則用到上一層try-catch 將無法繼續Cancel後的處理
-						 * sleep可讓程式休息，避免造成程式卡頓
-                    	 * */
-                    	try {
-                    		Thread.sleep(100);
-                    	}
-                    	catch(InterruptedException e) {
-                    		Thread.currentThread().interrupt();
-                    	}     
-                	}            
-                }
+				/*
+				 * 在dpInBackgrepound.cancel 發生後
+				 * Thread如果還在sleep，會造成thread sleep interruption
+				 * 因此在thread.sleep 要多加一個try-catch 捕捉例外
+				 * 否則用到上一層try-catch 將無法繼續Cancel後的處理
+				 * sleep可讓程式休息，避免造成程式卡頓
+				 * */
+				try {
+					Thread.sleep(100);
+				}
+				catch(InterruptedException e) {
+					Thread.currentThread().interrupt();
+				}     
+                	           
+            
             }
             catch(Exception err){
             	t1.append("\n掃描錯誤...");

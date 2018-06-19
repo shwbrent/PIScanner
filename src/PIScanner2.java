@@ -159,7 +159,7 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
 	 * BackgroundCalculator is using for Analysis PDF and check the progress Bar
 	 * 
 	 * */
-    class BackgroundCalculator extends SwingWorker<Void, Void>{
+    private class BackgroundCalculator extends SwingWorker<Void, Void>{
 
     	private int filesCount;
     	private float progressDist;
