@@ -52,7 +52,7 @@
 2. 在介面(UI)中，巢狀類別**繼承(extends)SwingWorker<T,V>覆寫doInBackground、done實現子執行緒掃描**
 ```java
 
-	private class BackgroundCalculator extends SwingWorker<Void, Void>{
+    private class BackgroundCalculator extends SwingWorker<Void, Void>{
 		
 		/*此處省略*/
 		......
