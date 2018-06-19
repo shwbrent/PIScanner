@@ -24,7 +24,7 @@
 
 ---
 
-###程式重點說明
+## 程式重點說明
 1. 在選擇一個以上(含)的檔案/資料夾，會通過下列程式段**以遞迴方式將全部資料夾下的檔案回傳**
 ```java
     public static ArrayList<String> StripFolderFiles(String folder){
@@ -49,7 +49,7 @@
         return files;
     }
 ```
-2. 在介面(UI)中，巢狀類別繼承(extends)SwingWorker<T,V>覆寫doInBackground、done來實現子執行緒掃描
+2. 在介面(UI)中，巢狀類別**繼承(extends)SwingWorker<T,V>覆寫doInBackground、done**來實現子執行緒掃描
 ```java
 	    class BackgroundCalculator extends SwingWorker<Void, Void>{
 		
