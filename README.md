@@ -1,8 +1,18 @@
 # 個人資料掃描器PIScanner(Personal Information Scanner)<br>
 ![PIScanner](https://github.com/shwbrent/PIScanner/blob/master/Readme_IMG/UI.PNG "UI")<br>
 
-****
+---
 
+
+## 建置環境(Environment)
+* Windows 10
+* JavaSE-1.8
+* pdfbox-2.0.3
+* fontbox-2.0.3
+* commons-logging-1.2.jar
+* bcprov-ext-jdk14-1.49.jar
+
+---
 ## 個人資訊種類(Personal Information Category)
 * 身份證字號(Taiwan Identification)<br>
 * 台灣手機號碼(Taiwan mobile phone number)<br>
