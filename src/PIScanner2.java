@@ -25,6 +25,8 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
     ImageIcon icon2 = new ImageIcon(getClass().getResource("/save1.png"));//存檔Icon
     ImageIcon icon3 = new ImageIcon(getClass().getResource("/button1.png"));//開始掃描Icon
     ImageIcon icon4 = new ImageIcon(getClass().getResource("/personal1.png"));//JFrame Icon
+    ImageIcon icon5 = new ImageIcon(getClass().getResource("/Cancel.png"));//Cancel Icon
+    
     JFrame fr1 = new JFrame("可攜式文件之掃描個人機密資訊");
     Container cp=fr1.getContentPane();
     JMenuBar mb1 = new JMenuBar();
@@ -102,6 +104,7 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
         fr1.setLocationRelativeTo(null);
         fr1.setIconImage(icon4.getImage());
         b1.setIcon(icon3);
+        b2.setIcon(icon5);
         fr1.setJMenuBar(mb1);
         fr1.setBounds(0,0,800,600);        
         cp.setLayout(null);  //取消預設之 BorderLayout
