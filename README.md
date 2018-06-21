@@ -7,7 +7,7 @@
 ## 建置環境(Environment)
 * Windows 10
 * JavaSE-1.8
-* pdfbox-2.0.3
+* pdfbox-2.0.3(目前只能掃pdf)
 * fontbox-2.0.3
 * commons-logging-1.2.jar
 * bcprov-ext-jdk14-1.49.jar

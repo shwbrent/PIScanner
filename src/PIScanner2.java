@@ -329,7 +329,7 @@ public class PIScanner2 implements ActionListener, PropertyChangeListener{
 	                b1.setVisible(false);
 	                b2.setVisible(true);
         		}else {
-        			t1.setText("請選取個資種類!!\n");
+        			t1.setText("請選取個資種類再按掃描按鈕!!\n");
         		}
         	}else {
         		t1.setText("請開啟要掃描的檔案!!\n");
